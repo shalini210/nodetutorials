@@ -27,3 +27,16 @@ exports.updateUser=(user123)=>
     }
     return "record not found";
 }
+exports.deleteuser=(id)=>
+{
+    let index = users.findIndex((u)=>u.id==id)
+    if(index>=0)
+    {
+        users.splice(index,1)
+        return "user deleted"
+    }
+    else
+    {
+        return "user not found"
+    }
+}
