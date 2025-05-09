@@ -5,7 +5,11 @@ const userRouter = require("./Routers/userRouter")
 
 app.get("/",(req,res)=>
 {
-  res.send("use /users for user \n user /cars for cars")
+  res.sendFile(__dirname+"/home.html")
+})
+app.get("/adduser",(req,res)=>
+{
+  res.sendFile(__dirname+"/addusers.html")
 })
 app.use("/users",userRouter )
 

@@ -8,7 +8,9 @@ router.get("/",(req,res)=>  {
   })
   router.post("/",(req,res)=>
   {
-    let user = {id:parseInt(req.body.id),name:req.body.name,contactno:req.body.contact}
+    let user = {id:parseInt(req.body.id),
+      name:req.body.name,
+      contactno:req.body.contact}
     let msg = userController.adduser(user)
     res.send(msg)
   })
